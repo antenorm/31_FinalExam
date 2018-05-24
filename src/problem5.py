@@ -135,21 +135,16 @@ def problem5(m, numbers1, numbers2):
     Type hints:
       :type [str]
     """
-    list1 = []
-    for k in range(len(numbers1)):
-        if numbers1[k] == 0 or numbers2[k] == 0 or m == 0:
-            if numbers1[k] == 0 and numbers2[k] == 0 and m == 0:
-                list1.append(numbers1[k])
-                list1.append(numbers2[k])
 
-        elif (numbers2[k] % numbers1[k]) == m:
+    list1 = []
+    for k in range(len(numbers2)):
+        if (m * numbers1[k]) == numbers2[k]:
             list1.append(numbers1[k])
             list1.append(numbers2[k])
-
-
     return list1
+
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
