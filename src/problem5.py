@@ -2,9 +2,9 @@
 Final exam, problem 5.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and Ryan Antenore.  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -135,6 +135,19 @@ def problem5(m, numbers1, numbers2):
     Type hints:
       :type [str]
     """
+    list1 = []
+    for k in range(len(numbers1)):
+        if numbers1[k] == 0 or numbers2[k] == 0 or m == 0:
+            if numbers1[k] == 0 and numbers2[k] == 0 and m == 0:
+                list1.append(numbers1[k])
+                list1.append(numbers2[k])
+
+        elif (numbers2[k] % numbers1[k]) == m:
+            list1.append(numbers1[k])
+            list1.append(numbers2[k])
+
+
+    return list1
     # -------------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
